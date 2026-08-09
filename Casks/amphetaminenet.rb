@@ -1,13 +1,13 @@
 cask "amphetaminenet" do
-  version "1.0.4"
-  sha256 arm: "99e38e05726403c95627f6ced0593e692efc2d2fa8d152c008db55b7b8cad850", intel: "9cb161ef77b13ad84783e69deb7c3ba5b927b288f1d99435a37503d3aa1df78c"
+  version "1.0.5"
+  sha256 arm: "90902c2af5ec76c92a147d0e2e713cd43534548175352f3dd9ffba7a0b6aab14", intel: "c1fb2d26f28de69e55e7125f7634d5f1450188678e2b2db905cbb398e6c609e1"
 
   on_arm do
-    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.4/AmphetamineNet-1.0.4-macos-arm64.dmg"
+    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.5/AmphetamineNet-1.0.5-macos-arm64.dmg"
   end
 
   on_intel do
-    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.4/AmphetamineNet-1.0.4-macos-intel.dmg"
+    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.5/AmphetamineNet-1.0.5-macos-intel.dmg"
   end
 
   name "AmphetamineNet"
@@ -16,4 +16,10 @@ cask "amphetaminenet" do
 
   auto_updates true
   app "AmphetamineNet.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                    args: ["-cr", "#{appdir}/AmphetamineNet.app"],
+                    sudo: false
+  end
 end
