@@ -1,13 +1,13 @@
 cask "amphetaminenet" do
-  version "1.0.3"
-  sha256 arm: "8d76fcbbf279568bad033947be548a1224550e630f6acaf5d1ef9e43c2536fca", intel: "33a351c903e6f47fbdf9cdcfb699bf1a602b5d05e2487ea3240928cc039c4d6a"
+  version "1.0.4"
+  sha256 arm: "99e38e05726403c95627f6ced0593e692efc2d2fa8d152c008db55b7b8cad850", intel: "9cb161ef77b13ad84783e69deb7c3ba5b927b288f1d99435a37503d3aa1df78c"
 
   on_arm do
-    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.3/AmphetamineNet-1.0.3-macos-arm64.dmg"
+    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.4/AmphetamineNet-1.0.4-macos-arm64.dmg"
   end
 
   on_intel do
-    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.3/AmphetamineNet-1.0.3-macos-intel.dmg"
+    url "https://github.com/RASLK/AmphetamineNet/releases/download/v1.0.4/AmphetamineNet-1.0.4-macos-intel.dmg"
   end
 
   name "AmphetamineNet"
